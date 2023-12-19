@@ -7,35 +7,113 @@
     <title>Aiman</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <style>
+        #home {
+            height: auto;
+        }
+        .video-container {
+            display: flex;
+            align-items: center;
+        }
+
+        .video-content {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .video-content h2 {
+            font-size: 24px;
+        }
+
+        .video-wrapper {
+            max-width: 50%;
+            margin-left: 8%;
+            margin-top: 8%;
+        }
+
+        @media (max-width: 768px) {
+            .video-container {
+                flex-direction: column;
+            }
+
+            .video-wrapper {
+                max-width: 100%;
+                margin-bottom: 20px;
+                margin-right: 10%;
+            }
+        }
+    </style>
 </head>
+<header>
+    <h2 class="logo"><span>A</span>iman</h2>
+    <nav class="navigation">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#violin">Violin</a>
+        <a href="#gear">Gear</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    <a href="https://api.whatsapp.com/send?phone=601128259060" class="btn-talk">Let's Talk</a>
+</header>
 <body>
-    <header>
-        <h2 class="logo"><span>A</span>iman</h2>
-        <nav class="navigation">
-            <a href="#">Home</a>
-            <a href="#">About</a>
-            <a href="#">Portfolio</a>
-            <a href="#">Blog</a>
-            <a href="#">Contact</a>
-        </nav>
-        <a href="#" class="btn-talk">Let's Talk</a>
-    </header>
-    <section class="home">
+    <section class="home" id="home">
+        <div class="video-wrapper">
+            <video controls width="50%" height="auto">
+                <source src="vid.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
         <div class="content">
             <h2>Hi, I'm <span>Aiman</span></h2>
             <h4>Musician | Violinist</h4>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
                 Impedit incidunt atque recusandae rem quam.</p>
-            <div class="btn-group">
-                <a href="https://api.whatsapp.com/send?phone=601128259060">Contact Me</a>
-                <a href="#">See Projects</a>
-            </div>
             <div class="social-icons">
-                <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                <a href="#"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+                <a href="https://www.tiktok.com/@aeman.razali"><i class="fa-brands fa-tiktok fa-2x"></i></a>
             </div>
         </div>
+    </section>
+
+    <section class="about" id="about">
+        <h2>About Me</h2>
+    </section>
+    <section class="about_content" id="about_content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.</p>
+    </section>
+
+    <section class="violin" id="violin">
+        <h2>Violin</h2>
+    </section>
+    <section class="violin_content" id="violin_content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.</p>
+    </section>
+
+    <section class="gear" id="gear">
+        <h2>Gear</h2>
+    </section>
+    <section class="gear_content" id="gear_content">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.Lorem ipsum dolor sit amet consectetur adipisicing elit. A esse totam provident voluptas similique.
+            Impedit incidunt atque recusandae rem quam.</p>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contact</h2>
     </section>
 </body>
 </html>

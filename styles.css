@@ -7,29 +7,39 @@
 }
 header {
     position: fixed;
+    background-color: #fefae0;
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 100px;
+    padding: 20px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     z-index: 100;
 }
+
+body {
+    background-color: #283618;
+    color: white;
+}
+
+html{
+    scroll-behavior: smooth;
+}
 .logo {
     font-size: 2em;
-    color: #555;
+    color: #bc6c25;
     cursor: default;
 }
 .logo span {
-    color: rgb(232, 166, 42);
+    color: #283618;
 }
 .navigation {
     margin-left: -300px;
 }
 .navigation a {
     font-size: 1.1em;
-    color: #555;
+    color: #283618;
     text-decoration: none;
     margin-right: 40px;
     font-weight: 500;
@@ -56,16 +66,14 @@ header {
     position: relative;
     width: 100%;
     height: 100vh;
-    background: url('background.jpg');
-    background-size: cover;
-    background-position: center;
     display: flex;
     align-items: center;
     padding: 30px 100px;
 }
 .content {
     max-width: 500px;
-    color: #555;
+    background-color: #283618;
+    color: white;
 }
 .content h2 {
     font-size: 3em;
@@ -80,18 +88,18 @@ header {
     padding: 10px 0 40px 0;
 }
 .btn-group a {
-    color: #fff;
+    color: rgb(232, 166, 42);
     text-decoration: none;
     padding: 10px 40px;
-    background: rgb(232, 166, 42);
+    background: transparent;
     border-radius: 10px;
     border: 2px solid rgb(232, 166, 42);
     font-weight: 500;
     transition: .3s;
 }
 .btn-group a:hover:nth-child(1) {
-    color: rgb(232, 166, 42);
-    background: transparent;
+    color: #fff;
+    background: rgb(232, 166, 42);
 }
 .btn-group a:nth-child(2) {
     color: rgb(232, 166, 42);
@@ -111,18 +119,109 @@ header {
     display: inline-block;
     width: 35px;
     height: 35px;
-    background: rgb(232, 166, 42);
-    border-radius: 50%;
     margin-right: 22px;
     text-align: center;
     line-height: 35px;
-    border: 1px solid #fff;
-    outline: 2px solid rgb(232, 166, 42);
     transition: .3s;
 }
 .social-icons a:hover {
     transform: translateY(-5px);
+    
 }
 .social-icons a i {
     color: #fff;
+}
+
+.social-icons a i:hover {
+    color: rgb(232, 166, 42);
+}
+
+.pic_content img{
+    border-radius: 50%;
+    display: flex;
+    height: 400px;
+    width: 400px;
+}
+
+.about {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    display: flex;
+}
+
+.about h2 {
+    text-align: center; /* Text alignment */
+    font-size: 3em;
+}
+
+.about_content {
+    text-align: center;
+    font-size: 18px;
+    padding: 80px;
+}
+
+
+.violin {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    display: flex;
+}
+.violin h2{
+    text-align: center;
+    font-size: 3em;
+}
+.violin_content {
+    text-align: center;
+    font-size: 18px;
+    padding: 80px;
+}
+
+.gear {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    display: flex;
+}
+.gear h2{
+    text-align: center;
+    font-size: 3em;
+}
+.gear_content {
+    text-align: center;
+    font-size: 18px;
+    padding: 80px;
+}
+
+.contact {
+    position: relative;
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    display: flex;
+}
+.contact h2{
+    text-align: center;
+    font-size: 3em;
+}
+.contact_content {
+    text-align: center;
+    font-size: 18px;
+    padding: 80px;
 }
