@@ -7,7 +7,7 @@
 }
 header {
     position: fixed;
-    background-color: #fefae0;
+    background-color: #DFD0B8;
     top: 0;
     left: 0;
     width: 100%;
@@ -19,8 +19,9 @@ header {
 }
 
 body {
-    background-color: #283618;
-    color: white;
+    background-color: #153448
+    ;
+    color: #DFD0B8;
 }
 
 html{
@@ -28,40 +29,115 @@ html{
 }
 .logo {
     font-size: 2em;
-    color: #bc6c25;
+    color: #3C5B6F;
     cursor: default;
 }
 .logo span {
-    color: #283618;
+    color: #153448
+    ;
 }
 .navigation {
     margin-left: -300px;
 }
 .navigation a {
     font-size: 1.1em;
-    color: #283618;
+    color: #153448;
     text-decoration: none;
     margin-right: 40px;
     font-weight: 500;
     transition: .3s;
 }
 .navigation a:hover {
-    color: rgb(232, 166, 42);
+    color: rgb(148, 137, 121);
 }
 .btn-talk {
-    color: #fff;
+    color: #DFD0B8;
     text-decoration: none;
     padding: 8px 35px;
-    background: rgb(232, 166, 42);
+    background: rgb(148, 137, 121);
     border-radius: 10px;
-    border: 2px solid rgb(232, 166, 42);
+    border: 2px solid rgb(148, 137, 121);
     font-weight: 500;
     transition: .3s;
 }
 .btn-talk:hover {
-    color: rgb(232, 166, 42);
     background: transparent;
 }
+@media screen and (max-width: 1000px) {
+    .navigation {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        width: 60%;
+        max-width: 300px;
+        background-color: #DFD0B8;
+        padding: 80px 20px 20px;
+        transition: right 0.3s ease-in-out;
+        z-index: 99;
+    }
+
+    .navigation.active {
+        right: 0;
+    }
+
+    .navigation a {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 1.2em;
+        text-align: center;
+        color: #153448
+        ;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .navigation a:hover {
+        color: rgb(148, 137, 121);
+    }
+
+    .btn-talk {
+        display: block;
+        margin-top: 20px;
+    }
+}
+
+/* Hamburger menu icon styles */
+.hamburger-menu {
+    display: none; /* Hide by default on larger screens */
+}
+
+@media screen and (max-width: 1000px) {
+    .hamburger-menu {
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        z-index: 100;
+        cursor: pointer;
+    }
+
+    .hamburger-icon {
+        width: 30px;
+        height: 3px;
+        background-color: #153448
+        ;
+        margin: 6px 0;
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .hamburger-icon.active:nth-child(1) {
+        transform: translateY(10px) rotate(45deg);
+    }
+
+    .hamburger-icon.active:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger-icon.active:nth-child(3) {
+        transform: translateY(-10px) rotate(-45deg);
+    }
+}
+
 .home {
     position: relative;
     width: 100%;
@@ -72,14 +148,15 @@ html{
 }
 .content {
     max-width: 500px;
-    background-color: #283618;
-    color: white;
+    background-color: #153448
+    ;
+    color: #DFD0B8;
 }
 .content h2 {
     font-size: 3em;
 }
 .content h2 span {
-    color: rgb(232, 166, 42);
+    color: #FEAE6F;
 }
 .content h4 {
     font-size: 2em;
@@ -88,28 +165,28 @@ html{
     padding: 10px 0 40px 0;
 }
 .btn-group a {
-    color: rgb(232, 166, 42);
+    color: rgb(148, 137, 121);
     text-decoration: none;
     padding: 10px 40px;
     background: transparent;
     border-radius: 10px;
-    border: 2px solid rgb(232, 166, 42);
+    border: 2px solid rgb(148, 137, 121);
     font-weight: 500;
     transition: .3s;
 }
 .btn-group a:hover:nth-child(1) {
-    color: #fff;
-    background: rgb(232, 166, 42);
+    color: #DFD0B8;
+    background: rgb(148, 137, 121);
 }
 .btn-group a:nth-child(2) {
-    color: rgb(232, 166, 42);
+    color: rgb(148, 137, 121);
     background: transparent;
     margin-left: 30px;
     padding: 10px 30px;
 }
 .btn-group a:hover:nth-child(2) {
-    color: #fff;
-    background: rgb(232, 166, 42);
+    color: #DFD0B8;
+    background: rgb(148, 137, 121);
 }
 .social-icons {
     position: absolute;
@@ -129,11 +206,11 @@ html{
     
 }
 .social-icons a i {
-    color: #fff;
+    color: #DFD0B8;
 }
 
 .social-icons a i:hover {
-    color: rgb(232, 166, 42);
+    color: #FEAE6F;
 }
 
 .pic_content img{
@@ -141,6 +218,10 @@ html{
     display: flex;
     height: 400px;
     width: 400px;
+}
+
+@media (max-width: 1000px) {
+
 }
 
 .about {
@@ -224,4 +305,26 @@ html{
     text-align: center;
     font-size: 18px;
     padding: 80px;
+}
+#home {
+    height: auto;
+}
+.video-container {
+    display: flex;
+    align-items: center;
+}
+
+.video-content {
+    flex: 1;
+    padding: 20px;
+}
+
+.video-content h2 {
+    font-size: 24px;
+}
+
+.video-wrapper {
+    max-width: 50%;
+    margin-left: 8%;
+    margin-top: 8%;
 }
