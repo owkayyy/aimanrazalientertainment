@@ -49,20 +49,16 @@ html{
     color: rgba(236,176,18,255);
     text-decoration: none;
     margin-right: 40px;
-    font-weight: 300;
     transition: .3s;
 }
 .navigation a:hover {
     color: rgb(132,100,26);
 }
 .btn-talk {
-    color: #DFD0B8;
     text-decoration: none;
     padding: 8px 35px;
-    background: rgba(20,25,30,255);
+    background: rgba(59, 51, 51, 0.877);
     border-radius: 10px;
-    border: 2px solid rgba(20,25,30,255);
-    font-weight: 500;
     transition: .8s;
 }
 .btn-talk:hover {
@@ -76,7 +72,7 @@ html{
         height: 100vh;
         width: 60%;
         max-width: 300px;
-        background-color: #DFD0B8;
+        background-color: rgba(20,25,30,255);
         padding: 80px 20px 20px;
         transition: right 0.3s ease-in-out;
         z-index: 99;
@@ -91,8 +87,7 @@ html{
         margin-bottom: 20px;
         font-size: 1.2em;
         text-align: center;
-        color: #153448
-        ;
+        color: rgba(236,176,18,255);
         transition: color 0.3s ease-in-out;
     }
 
@@ -124,8 +119,7 @@ html{
     .hamburger-icon {
         width: 30px;
         height: 3px;
-        background-color: #153448
-        ;
+        background-color: rgba(236,176,18,255);
         margin: 6px 0;
         transition: transform 0.3s ease-in-out;
     }
@@ -153,8 +147,9 @@ html{
 }
 .content {
     max-width: 500px;
-    background-color: rgba(59, 51, 51, 0.473);
+    background-color: rgba(59, 51, 51, 0.877);
     color: #DFD0B8;
+    padding: 10px;
 }
 .content h2 {
     font-size: 3em;
@@ -193,6 +188,9 @@ html{
     background: rgb(148, 137, 121);
 }
 .social-icons {
+    max-width: 500px;
+    height: auto;
+    background-color:  rgba(59, 51, 51, 0.877);
     position: absolute;
     bottom: 50px;
 }
@@ -200,7 +198,7 @@ html{
     display: inline-block;
     width: 35px;
     height: 35px;
-    margin-right: 22px;
+    margin: 12px;
     text-align: center;
     line-height: 35px;
     transition: .3s;
@@ -227,7 +225,7 @@ html{
 @media (max-width: 1000px) {
 
 }
-
+/* Gallery container styling */
 .gallery {
     position: relative;
     width: 100%;
@@ -239,50 +237,156 @@ html{
     display: flex;
 }
 
+/* Gallery title styling */
 .gallery h2 {
-    text-align: center; /* Text alignment */
+    text-align: center;
     font-size: 3em;
 }
 
+/* Gallery content container styling */
 .gallery_content {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; 
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
+/* Image row container styling */
 .image-row {
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; 
-    display: flex;
-    justify-content: space-between;
-    margin: 5px; /* Adjust margin between rows */
+    justify-content: center;
+    margin: 5px;
 }
 
+/* Poker card styling */
+.poker-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    width: 180px; /* Adjust width to fit content */
+    height: 120px;
+    margin:0  45px;
+}
+
+/* Image box styling */
 .image-box {
     background-color: rgba(58, 55, 55, 0.548);
     display: flex;
-    justify-content: center; /* Horizontally center the content */
-    align-items: center; 
-    width: 180px; /* Adjust width of each image box */
-    height: 120px; /* Adjust height of each image box */
-    overflow: hidden; /* Hide any content that overflows the box */
-    margin: 5px; /* Adjust margin between image boxes */
+    justify-content: center;
+    align-items: center;
+    width: 180px;
+    height: 120px;
+    overflow: hidden;
     border-radius: 3%;
-    transition: transform 0.5s ease;
+    position: absolute;
+    transition: transform 0.3s ease-in-out;
 }
 
-.image-box:hover {
-    transform: scale(1.2); /* Enlarge the image box by 10% on hover */
-}
-
+/* Image styling */
 .image-box img {
     border-radius: 3%;
     width: 90%;
     height: 88%;
-    object-fit: cover; /* Ensure image covers the container without stretching */
+    object-fit: cover;
 }
+
+/* Poker card image box stacking and initial positioning */
+.poker-card .image-box:nth-child(1) {
+    z-index: 6;
+    transform: translateX(0);
+}
+.poker-card .image-box:nth-child(2) {
+    z-index: 5;
+    transform: translateX(10px);
+}
+.poker-card .image-box:nth-child(3) {
+    z-index: 4;
+    transform: translateX(20px);
+}
+.poker-card .image-box:nth-child(4) {
+    z-index: 3;
+    transform: translateX(30px);
+}
+.poker-card .image-box:nth-child(5) {
+    z-index: 2;
+    transform: translateX(40px);
+}
+.poker-card .image-box:nth-child(6) {
+    z-index: 1;
+    transform: translateX(50px);
+}
+
+/* Modal styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #DFD0B8;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.modal-images img {
+    margin: 10px;
+    width: 150px;
+    height: 100px;
+    object-fit: cover;
+    cursor: pointer; /* Add cursor pointer to indicate clickable */
+    transition: transform 0.3s;
+}
+
+/* CSS for full-size image */
+.modal-images img.full-size {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1001; /* Ensure it's above the modal */
+    width: auto;
+    height: auto;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+
+
+
 
 
 
