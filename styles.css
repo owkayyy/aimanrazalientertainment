@@ -245,14 +245,6 @@ html{
     height: 400px;
     width: 400px;
 }
-@media screen and (max-width: 468px) {
-    .content h2 {
-        font-size: 1.5em;
-    }
-    .content h4 {
-        font-size: 1em;
-    }
-}
 @media screen and (max-width: 768px)  {
     .home {
         display: flex;
@@ -277,10 +269,10 @@ html{
         height: 250px;
     }
     .content h2 {
-        font-size: 50px;
+        font-size: 40px;
     }
     .content h4 {
-        font-size: 36px;
+        font-size: 25px;
     }
     .social-icons {
         padding: 0px 0px;
@@ -376,6 +368,9 @@ html{
 
 /* Media query for mobile devices */
 @media (max-width: 768px) {
+    .gallery h2{
+        font-size: 40px;
+    }
     #gallery_content {
         justify-content: center;
         gap: 50px;
@@ -410,8 +405,11 @@ html{
     font-size: 18px;
     padding: 80px;
 }
-
-
+@media (max-width: 768px) {
+    .performance h2{
+        font-size: 40px;
+    }
+}
 
 
 .package {
@@ -432,4 +430,9 @@ html{
     text-align: center;
     font-size: 18px;
     padding: 80px;
+}
+@media (max-width: 768px) {
+    .package h2{
+        font-size: 40px;
+    }
 }
