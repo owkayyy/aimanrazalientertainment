@@ -39,48 +39,292 @@
 
 <body>
     <section class="home" id="home">
-        <div class="video-wrapper">
-            <video controls width="50%" height="auto">
-                <source src="vid.mp4" type="video/mp4">
-                Your browser does not support the video tag.
-            </video>
-        </div>
-        <div class="content">
-            <h2>Live solo violin performance</h2><br>
-            <p>Wedding | Dinner | Birthday Party | Corporate Events | Private Dinner | Concert </p>
-            <div class="social-icons">
-                <a href="https://www.instagram.com/alif.aeman"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                <a href="https://api.whatsapp.com/send?phone=601128259060"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
-                <a href="https://www.tiktok.com/@aeman.razali"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+        <div class="home-container">
+            <div class="video-wrapper">
+                <video autoplay loop controls>
+                    <source src="HomeVideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="content">
+                <h2>Live solo violin performance</h2>
+                <p>Wedding | Dinner | Birthday Party | Corporate Events | Private Dinner | Concert</p>
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/alif.aeman"><i class="fa-brands fa-instagram fa-2x"></i></a>
+                    <a href="https://api.whatsapp.com/send?phone=601128259060"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+                    <a href="https://www.tiktok.com/@aeman.razali"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+                </div>
             </div>
         </div>
     </section>
 
+ 
     <section class="gallery" id="gallery">
-        <h2>Gallery</h2>
-    </section>
-    <section class="gallery_content" id="gallery_content">
-        <div id="gallery_content">
-            <!-- Albums will be displayed here -->
+        <div class="gallery-container">
+            <h2>Gallery</h2>
+            <div class="albums">
+                <div class="album">
+                    <h3>Wedding</h3>
+                    <div class="fan-out">
+                        <img src="gambar/1.jpg" alt="Album 1 Image 1">
+                        <img src="gambar/2.jpg" alt="Album 1 Image 2">
+                        <img src="gambar/3.jpg" alt="Album 1 Image 3">
+                        <img src="gambar/4.jpg" alt="Album 1 Image 4">
+                        <img src="gambar/5.jpg" alt="Album 1 Image 5">
+                    </div>
+                </div>
+                <div class="album">
+                    <h3>Dinner</h3>
+                    <div class="fan-out">
+                        <img src="gambar/1.jpg" alt="Album 1 Image 1">
+                        <img src="gambar/2.jpg" alt="Album 1 Image 2">
+                        <img src="gambar/3.jpg" alt="Album 1 Image 3">
+                        <img src="gambar/4.jpg" alt="Album 1 Image 4">
+                        <img src="gambar/5.jpg" alt="Album 1 Image 5">
+                    </div>
+                </div>
+                <div class="album">
+                    <h3>Birthday Party</h3>
+                    <div class="fan-out">
+                        <img src="gambar/1.jpg" alt="Album 1 Image 1">
+                        <img src="gambar/2.jpg" alt="Album 1 Image 2">
+                        <img src="gambar/3.jpg" alt="Album 1 Image 3">
+                        <img src="gambar/4.jpg" alt="Album 1 Image 4">
+                        <img src="gambar/5.jpg" alt="Album 1 Image 5">
+                    </div>
+                </div>
+                <div class="album">
+                    <h3>Corporate Events</h3>
+                    <div class="fan-out">
+                        <img src="gambar/1.jpg" alt="Album 1 Image 1">
+                        <img src="gambar/2.jpg" alt="Album 1 Image 2">
+                        <img src="gambar/3.jpg" alt="Album 1 Image 3">
+                        <img src="gambar/4.jpg" alt="Album 1 Image 4">
+                        <img src="gambar/5.jpg" alt="Album 1 Image 5">
+                    </div>
+                </div>
+                <div class="album">
+                    <h3>Concert</h3>
+                    <div class="fan-out">
+                        <img src="gambar/1.jpg" alt="Album 1 Image 1">
+                        <img src="gambar/2.jpg" alt="Album 1 Image 2">
+                        <img src="gambar/3.jpg" alt="Album 1 Image 3">
+                        <img src="gambar/4.jpg" alt="Album 1 Image 4">
+                        <img src="gambar/5.jpg" alt="Album 1 Image 5">
+                    </div>
+                </div>
+            </div>
         </div>
-        <script src="gallery.js"></script>
-        <!-- Repeat for other rows -->
     </section>
-    
-    
+
+    <!-- Add this at the end of the body -->
+    <div id="lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <h3 id="lightbox-title"></h3>
+            <div class="lightbox-images"></div>
+        </div>
+    </div>
+
+    <div id="fullscreen-image" class="fullscreen-image">
+        <span class="close-fullscreen">&times;</span>
+        <img src="" alt="" id="fullscreen-img">
+    </div>
+
+    <script>
+        const albums = document.querySelectorAll('.album');
+        const lightbox = document.getElementById('lightbox');
+        const lightboxTitle = document.getElementById('lightbox-title');
+        const lightboxImages = document.querySelector('.lightbox-images');
+        const closeLightbox = document.querySelector('.close');
+        const fullscreenImage = document.getElementById('fullscreen-image');
+        const fullscreenImg = document.getElementById('fullscreen-img');
+        const closeFullscreen = document.querySelector('.close-fullscreen');
+
+        albums.forEach(album => {
+            album.addEventListener('click', () => {
+                const albumTitle = album.querySelector('h3').textContent;
+                const images = album.querySelectorAll('img');
+                
+                lightboxTitle.textContent = albumTitle;
+                lightboxImages.innerHTML = '';
+                
+                images.forEach(img => {
+                    const newImg = document.createElement('img');
+                    newImg.src = img.src;
+                    newImg.alt = img.alt;
+                    newImg.addEventListener('click', () => {
+                        fullscreenImg.src = img.src;
+                        fullscreenImg.alt = img.alt;
+                        fullscreenImage.style.display = 'flex';
+                    });
+                    lightboxImages.appendChild(newImg);
+                });
+                lightbox.style.display = 'flex';
+        });
+    });
+
+    closeLightbox.addEventListener('click', () => {
+        lightbox.style.display = 'none';
+    });
+
+    closeFullscreen.addEventListener('click', () => {
+        fullscreenImage.style.display = 'none';
+    });
+
+    lightbox.addEventListener('click', (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = 'none';
+        }
+    });
+
+    fullscreenImage.addEventListener('click', (e) => {
+        if (e.target === fullscreenImage) {
+            fullscreenImage.style.display = 'none';
+        }
+    });
+</script>
 
     <section class="performance" id="performance">
-        <h2>Performances</h2>
+        <div class="performance-container">
+            <h2>Performances</h2>
+            <div class="performance-albums">
+                <div class="performance-album" data-album="Wedding">
+                    <h3>Wedding</h3>
+                    <div class="fan-out">
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                    </div>
+                </div>
+                <div class="performance-album" data-album="Wedding">
+                    <h3>Dinner</h3>
+                    <div class="fan-out">
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                    </div>
+                </div>
+                <div class="performance-album" data-album="Wedding">
+                    <h3>Birthday Party</h3>
+                    <div class="fan-out">
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                    </div>
+                </div>
+                <div class="performance-album" data-album="Wedding">
+                    <h3>Concert</h3>
+                    <div class="fan-out">
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                    </div>
+                </div>
+                <div class="performance-album" data-album="Corporate">
+                    <h3>Corporate</h3>
+                    <div class="fan-out">
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                        <video src="vid.mp4"></video>
+                    </div>
+                </div>
+                <!-- Add more performance-album divs as needed -->
+            </div>
+        </div>
     </section>
-    <section class="performance" id="performance">
 
-    </section>
+    <!-- Add this at the end of the body -->
+    <div id="performance-lightbox" class="lightbox">
+        <span class="close">&times;</span>
+        <div class="lightbox-content">
+            <h3 id="performance-lightbox-title"></h3>
+            <div class="lightbox-videos"></div>
+        </div>
+    </div>
+
+    <div id="fullscreen-video" class="fullscreen-video">
+        <span class="close-fullscreen">&times;</span>
+        <video controls id="fullscreen-video-player"></video>
+    </div>
+
+    <script>
+        const performanceAlbums = document.querySelectorAll('.performance-album');
+        const performanceLightbox = document.getElementById('performance-lightbox');
+        const performanceLightboxTitle = document.getElementById('performance-lightbox-title');
+        const lightboxVideos = document.querySelector('.lightbox-videos');
+        const closePerformanceLightbox = performanceLightbox.querySelector('.close');
+        const fullscreenVideo = document.getElementById('fullscreen-video');
+        const fullscreenVideoPlayer = document.getElementById('fullscreen-video-player');
+        const closeFullscreenVideo = fullscreenVideo.querySelector('.close-fullscreen');
+
+        performanceAlbums.forEach(album => {
+            album.addEventListener('click', () => {
+                const albumTitle = album.getAttribute('data-album');
+                const videos = album.querySelectorAll('video');
+                
+                performanceLightboxTitle.textContent = albumTitle;
+                lightboxVideos.innerHTML = '';
+                
+                videos.forEach(video => {
+                    const newVideo = document.createElement('video');
+                    newVideo.src = video.src;
+                    newVideo.addEventListener('click', () => {
+                        fullscreenVideoPlayer.src = video.src;
+                        fullscreenVideo.style.display = 'flex';
+                    });
+                    lightboxVideos.appendChild(newVideo);
+                });
+                
+                performanceLightbox.style.display = 'flex';
+            });
+        });
+
+        closePerformanceLightbox.addEventListener('click', () => {
+            performanceLightbox.style.display = 'none';
+        });
+
+        closeFullscreenVideo.addEventListener('click', () => {
+            fullscreenVideo.style.display = 'none';
+            fullscreenVideoPlayer.pause();
+        });
+
+        performanceLightbox.addEventListener('click', (e) => {
+            if (e.target === performanceLightbox) {
+                performanceLightbox.style.display = 'none';
+            }
+        });
+
+        fullscreenVideo.addEventListener('click', (e) => {
+            if (e.target === fullscreenVideo) {
+                fullscreenVideo.style.display = 'none';
+                fullscreenVideoPlayer.pause();
+            }
+        });
+    </script>
 
     <section class="package" id="package">
-        <h2>Packages</h2>
-    </section>
-    <section class="package" id="package">
-
+        <div class="package-container">
+            <h2>Packages</h2>
+            <div class="package-images">
+                <div class="package-image">
+                    <img src="Package/1.jpeg" alt="Package 1">
+                </div>
+                <div class="package-image">
+                    <img src="Package/2.jpeg" alt="Package 2">
+                </div>
+            </div>
+        </div>
     </section>
 
 
