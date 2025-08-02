@@ -4,69 +4,168 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aiman</title>
+    <title>Aiman Razali- Violinist</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Crimson+Text:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
-<header>
-    <h2 class="logo"><span>AIMAN RAZALI<br> ENTERTAINMENT</h2>
-    <div class="hamburger-menu">
-        <div class="hamburger-icon"></div>
-        <div class="hamburger-icon"></div>
-        <div class="hamburger-icon"></div>
-    </div>
-    <nav class="navigation">
-        <a href="#home">Home</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#performance">Performances</a>
-        <a href="#package">Packages</a>
-        <a href="#reviews">Reviews</a>
-        <a href="https://api.whatsapp.com/send?phone=601128259060" class="btn-talk">Let's Talk</a>
-    </nav>
-</header>
-
-<script>
-    // JavaScript to toggle the navigation menu
-    const hamburgerMenu = document.querySelector('.hamburger-menu');
-    const navMenu = document.querySelector('.navigation');
-
-    hamburgerMenu.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-        hamburgerMenu.querySelectorAll('.hamburger-icon').forEach(icon => {
-            icon.classList.toggle('active');
-        });
-    });
-</script>
-
 <body>
+    <header>
+        <div class="logo">
+            <h2>Aiman Razali</h2>
+            <span class="subtitle">Violinist</span>
+        </div>
+        <div class="hamburger-menu">
+            <div class="hamburger-icon"></div>
+            <div class="hamburger-icon"></div>
+            <div class="hamburger-icon"></div>
+        </div>
+        <nav class="navigation">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#repertoire">Repertoire</a>
+            <a href="#performances">Performances</a>
+            <a href="#gallery">Gallery</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <script>
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navMenu = document.querySelector('.navigation');
+
+        hamburgerMenu.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburgerMenu.querySelectorAll('.hamburger-icon').forEach(icon => {
+                icon.classList.toggle('active');
+            });
+        });
+    </script>
+
     <section class="home" id="home">
         <div class="home-container">
-            <div class="video-row">
-                <div class="video-wrapper main-video">
-                    <video autoplay loop controls>
-                        <source src="home/1.mp4" type="video/mp4">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Aiman Razali</h1>
+                    <h2>Classical Violinist</h2>
+                    <p>Bringing the timeless beauty of classical music to life through the soulful voice of the violin</p>
+                    <div class="hero-buttons">
+                        <a href="#performances" class="btn-primary">Watch Performances</a>
+                        <a href="#contact" class="btn-secondary">Book for Events</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="violin-image">
+                        <img src="pic/1.JPG" alt="Sarah Chen performing on violin">
+                    </div>
+                </div>
+            </div>
+            <div class="featured-video">
+                <h3>Featured Performance</h3>
+                <div class="video-container">
+                    <video autoplay loop muted>
+                        <source src="HomeVideo.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
-                <div class="side-content">
-                    <div class="content">
-                        <h2>Live solo violin performance</h2>
-                        <p>Wedding | Dinner | Birthday Party | Corporate Events | Private Dinner | Concert</p>
-                        <div class="social-icons">
-                            <a href="https://www.instagram.com/alif.aeman"><i class="fa-brands fa-instagram fa-2x"></i></a>
-                            <a href="https://api.whatsapp.com/send?phone=601128259060"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
-                            <a href="https://www.tiktok.com/@aeman.razali"><i class="fa-brands fa-tiktok fa-2x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="about" id="about">
+        <div class="about-container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About Aiman</h2>
+                    <p>Aiman Razali is a distinguished violinist with over 16 years of professional experience, specializing in classical and contemporary repertoire. A graduate of the Akademi Seni Budaya dan Warisan ( ASWARA ), Aiman has performed with multiple bands across Malaysia.</p>
+                    <p>His passion for music extends beyond the concert hall, as he regularly performs at weddings, corporate events, and private gatherings, bringing the elegance and emotion of classical violin to every occasion.</p>
+                    <div class="credentials">
+                        <div class="credential">
+                            <i class="fas fa-graduation-cap"></i>
+                            <span>Akademi Seni Budaya dan Warisan ( ASWARA )</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-trophy"></i>
+                            <span>International Violin Competition Winner</span>
+                        </div>
+                        <div class="credential">
+                            <i class="fas fa-music"></i>
+                            <span>16+ Years Professional Experience</span>
                         </div>
                     </div>
+                </div>
+                <div class="about-image">
+                    <img src="pic/2.JPG" alt="Sarah Chen portrait">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="repertoire" id="repertoire">
+        <div class="repertoire-container">
+            <h2>Repertoire</h2>
+            <div class="repertoire-categories">
+                <div class="category">
+                    <h3>Classical</h3>
+                    <ul>
+                        <li>Bach - Sonatas and Partitas</li>
+                        <li>Beethoven - Violin Sonatas</li>
+                        <li>Mozart - Violin Concertos</li>
+                        <li>Tchaikovsky - Violin Concerto</li>
+                        <li>Paganini - Caprices</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Wedding & Events</h3>
+                    <ul>
+                        <li>Canon in D - Pachelbel</li>
+                        <li>Ave Maria - Schubert</li>
+                        <li>Air on G String - Bach</li>
+                        <li>Meditation from Thaïs</li>
+                        <li>Romance - Beethoven</li>
+                    </ul>
+                </div>
+                <div class="category">
+                    <h3>Contemporary</h3>
+                    <ul>
+                        <li>Film Music Arrangements</li>
+                        <li>Popular Song Covers</li>
+                        <li>Jazz Standards</li>
+                        <li>Folk Music</li>
+                        <li>Custom Arrangements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="performances" id="performances">
+        <div class="performances-container">
+            <h2>Performance Videos</h2>
+            <div class="performance-grid">
+                <div class="performance-item">
+                    <h3>Wedding Ceremony</h3>
                     <div class="video-wrapper">
-                        <video autoplay loop controls>
-                            <source src="home/2.mp4" type="video/mp4">
+                        <video controls>
+                            <source src="vid.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
+                </div>
+                <div class="performance-item">
+                    <h3>Classical Recital</h3>
                     <div class="video-wrapper">
-                        <video autoplay loop controls>
-                            <source src="home/3.mp4" type="video/mp4">
+                        <video controls>
+                            <source src="HomeVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+                <div class="performance-item">
+                    <h3>Corporate Event</h3>
+                    <div class="video-wrapper">
+                        <video controls>
+                            <source src="vid.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
@@ -74,430 +173,171 @@
             </div>
         </div>
     </section>
-
 
     <section class="gallery" id="gallery">
         <div class="gallery-container">
-            <h2>Gallery</h2>
-            <div class="albums">
-                <div class="album">
-                    <h3>Wedding</h3>
-                    <div class="fan-out">
-                        <img src="pic/wedding1.JPG" alt="Album 1 Image 1">
-                        <img src="pic/wedding2.JPG" alt="Album 1 Image 2">
-                        <img src="pic/wedding3.JPG" alt="Album 1 Image 3">
-                        <img src="pic/wedding4.JPG" alt="Album 1 Image 4">
-                        <img src="pic/wedding5.JPG" alt="Album 1 Image 5">
-                        <img src="pic/wedding6.JPG" alt="Album 1 Image 6">
-                        <img src="pic/wedding7.JPG" alt="Album 1 Image 7">
-                        <img src="pic/wedding8.PNG" alt="Album 1 Image 8">
-                        <img src="pic/wedding9.JPG" alt="Album 1 Image 9">
-                        <img src="pic/wedding10.JPG" alt="Album 1 Image 10">
-                        <img src="pic/wedding11.JPG" alt="Album 1 Image 11">
-                        <img src="pic/wedding12.JPG" alt="Album 1 Image 12">
-                        <img src="pic/wedding13.JPG" alt="Album 1 Image 13">
-                        <img src="pic/wedding14.JPG" alt="Album 1 Image 14">
-                        <img src="pic/wedding15.JPG" alt="Album 1 Image 15">
-                        <img src="pic/wedding16.JPG" alt="Album 1 Image 16">
+            <h2>Performance Gallery</h2>
+            <div class="gallery-grid">
+                <div class="gallery-category">
+                    <h3>Weddings</h3>
+                    <div class="image-grid">
+                        <img src="pic/wedding1.JPG" alt="Wedding performance" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/wedding2.JPG" alt="Wedding ceremony" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/wedding3.JPG" alt="Wedding reception" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/wedding4.JPG" alt="Wedding performance" onclick="openLightbox(this.src, this.alt)">
                     </div>
                 </div>
-                <div class="album">
-                    <h3>Dinner</h3>
-                    <div class="fan-out">
-                        <img src="pic/dinner1.JPG" alt="Album 1 Image 1">
-                        <img src="pic/dinner2.JPG" alt="Album 2 Image 2">
-                        <img src="pic/dinner3.JPG" alt="Album 2 Image 3">
-                        <img src="pic/dinner4.JPG" alt="Album 2 Image 4">
-                        <img src="pic/dinner5.JPG" alt="Album 2 Image 5">
-                        <img src="pic/dinner6.JPG" alt="Album 2 Image 6">
-                        <img src="pic/dinner7.JPG" alt="Album 2 Image 7">
-                        <img src="pic/dinner8.JPG" alt="Album 2 Image 8">
-                        <img src="pic/dinner9.JPG" alt="Album 2 Image 9">
-                        <img src="pic/dinner10.JPG" alt="Album 2 Image 10">
-                        <img src="pic/dinner11.JPG" alt="Album 2 Image 11">
-                        <img src="pic/dinner12.JPG" alt="Album 2 Image 12">
-                        <img src="pic/dinner13.JPG" alt="Album 2 Image 13">
-                        <img src="pic/dinner14.JPG" alt="Album 2 Image 14">
-                        <img src="pic/dinner15.JPG" alt="Album 2 Image 15">
+                <div class="gallery-category">
+                    <h3>Concerts</h3>
+                    <div class="image-grid">
+                        <img src="pic/live1.JPG" alt="Concert performance" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/live2.JPG" alt="Solo recital" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/live3.JPG" alt="Orchestra performance" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/live4.JPG" alt="Chamber music" onclick="openLightbox(this.src, this.alt)">
                     </div>
                 </div>
-                <div class="album">
-                    <h3>Launching</h3>
-                    <div class="fan-out">
-                        <img src="pic/launching1.JPG" alt="Album 3 Image 1">
-                        <img src="pic/launching2.JPG" alt="Album 3 Image 1">
-                    </div>
-                </div>
-                <div class="album">
-                    <h3>TV</h3>
-                    <div class="fan-out">
-                        <img src="pic/tv1.JPG" alt="Album 4 Image 1">
-                        <img src="pic/tv2.JPG" alt="Album 4 Image 2">
-                        <img src="pic/tv3.JPG" alt="Album 4 Image 3">
-                        <img src="pic/tv4.JPG" alt="Album 4 Image 4">
-                        <img src="pic/tv5.JPG" alt="Album 4 Image 5">
-                        <img src="pic/tv6.JPG" alt="Album 4 Image 6">
-                        <img src="pic/tv7.JPG" alt="Album 4 Image 7">
-                        <img src="pic/tv8.JPG" alt="Album 4 Image 8">
-                        <img src="pic/tv9.JPG" alt="Album 4 Image 9">
-                    </div>
-                </div>
-                <div class="album">
-                    <h3>Live</h3>
-                    <div class="fan-out">
-                        <img src="pic/live1.JPG" alt="Album 5 Image 1">
-                        <img src="pic/live2.JPG" alt="Album 5 Image 2">
-                        <img src="pic/live3.JPG" alt="Album 5 Image 3">
-                        <img src="pic/live4.JPG" alt="Album 5 Image 4">
-                        <img src="pic/live5.JPG" alt="Album 5 Image 5">
-                        <img src="pic/live6.JPG" alt="Album 5 Image 6">
-                        <img src="pic/live7.JPG" alt="Album 5 Image 7">
-                        <img src="pic/live8.JPG" alt="Album 5 Image 8">
-                        <img src="pic/live9.JPG" alt="Album 5 Image 9">
-                        <img src="pic/live10.JPG" alt="Album 5 Image 10">
-                        <img src="pic/live11.JPG" alt="Album 5 Image 11">
-                        <img src="pic/live12.JPG" alt="Album 5 Image 12">
-                        <img src="pic/live13.JPG" alt="Album 5 Image 13">
-                        <img src="pic/live14.JPG" alt="Album 5 Image 14">
-                        <img src="pic/live15.JPG" alt="Album 5 Image 15">
-                        <img src="pic/live16.JPG" alt="Album 5 Image 16">
-                        <img src="pic/live17.JPG" alt="Album 5 Image 17">
-                        <img src="pic/live18.JPG" alt="Album 5 Image 18">
-                        <img src="pic/live19.JPG" alt="Album 5 Image 19">
-                        <img src="pic/live20.JPG" alt="Album 5 Image 20">
-                        <img src="pic/live21.JPG" alt="Album 5 Image 21">
-                        <img src="pic/live22.JPG" alt="Album 5 Image 22">
-                        <img src="pic/live23.JPG" alt="Album 5 Image 23">
-                        <img src="pic/live24.JPG" alt="Album 5 Image 24">
-                        <img src="pic/live25.JPG" alt="Album 5 Image 25">
+                <div class="gallery-category">
+                    <h3>Corporate Event/Dinner</h3>
+                    <div class="image-grid">
+                        <img src="pic/dinner1.JPG" alt="Corporate event" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/dinner2.JPG" alt="Private dinner" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/dinner3.JPG" alt="Gala performance" onclick="openLightbox(this.src, this.alt)">
+                        <img src="pic/dinner4.JPG" alt="Special event" onclick="openLightbox(this.src, this.alt)">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Add this at the end of the body -->
+    <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <div class="lightbox-content">
-            <h3 id="lightbox-title"></h3>
-            <div class="lightbox-images"></div>
-        </div>
+        <span class="close-lightbox" onclick="closeLightbox()">&times;</span>
+        <img id="lightbox-img" src="" alt="">
+        <div class="lightbox-caption" id="lightbox-caption"></div>
     </div>
 
-    <div id="fullscreen-image" class="fullscreen-image">
-        <span class="close-fullscreen">&times;</span>
-        <img src="" alt="" id="fullscreen-img">
-    </div>
-
-    <script>
-        const albums = document.querySelectorAll('.album');
-        const lightbox = document.getElementById('lightbox');
-        const lightboxTitle = document.getElementById('lightbox-title');
-        const lightboxImages = document.querySelector('.lightbox-images');
-        const closeLightbox = document.querySelector('.close');
-        const fullscreenImage = document.getElementById('fullscreen-image');
-        const fullscreenImg = document.getElementById('fullscreen-img');
-        const closeFullscreen = document.querySelector('.close-fullscreen');
-
-        albums.forEach(album => {
-            album.addEventListener('click', () => {
-                const albumTitle = album.querySelector('h3').textContent;
-                const images = album.querySelectorAll('img');
-                
-                lightboxTitle.textContent = albumTitle;
-                lightboxImages.innerHTML = '';
-                
-                images.forEach(img => {
-                    const newImg = document.createElement('img');
-                    newImg.src = img.src;
-                    newImg.alt = img.alt;
-                    newImg.addEventListener('click', () => {
-                        fullscreenImg.src = img.src;
-                        fullscreenImg.alt = img.alt;
-                        fullscreenImage.style.display = 'flex';
-                    });
-                    lightboxImages.appendChild(newImg);
-                });
-                lightbox.style.display = 'flex';
-        });
-    });
-
-    closeLightbox.addEventListener('click', () => {
-        lightbox.style.display = 'none';
-    });
-
-    closeFullscreen.addEventListener('click', () => {
-        fullscreenImage.style.display = 'none';
-    });
-
-    lightbox.addEventListener('click', (e) => {
-        if (e.target === lightbox) {
-            lightbox.style.display = 'none';
-        }
-    });
-
-    fullscreenImage.addEventListener('click', (e) => {
-        if (e.target === fullscreenImage) {
-            fullscreenImage.style.display = 'none';
-        }
-    });
-</script>
-
-    <section class="performance" id="performance">
-        <div class="performance-container">
-            <h2>Performances</h2>
-            <div class="performance-albums">
-                <div class="performance-album" data-album="Wedding">
-                    <h3>Wedding</h3>
-                    <div class="fan-out">
-                        <video src="video wedding/wedding1.mp4"></video>
-                        <video src="video wedding/wedding2.mp4"></video>
-                        <video src="video wedding/wedding3.mp4"></video>
-                        <video src="video wedding/wedding4.mp4"></video>
-                        <video src="video wedding/wedding5.mp4"></video>
-                        <video src="video wedding/wedding6.mp4"></video>
-                        <video src="video wedding/wedding7.mp4"></video>
-                        <video src="video wedding/wedding8.MP4"></video>
-                        <video src="video wedding/wedding9.MP4"></video>
-                        <video src="video wedding/wedding10.MOV"></video>
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2>Book Sarah for Your Event</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Performance Services</h3>
+                    <ul>
+                        <li><i class="fas fa-heart"></i> Wedding Ceremonies & Receptions</li>
+                        <li><i class="fas fa-building"></i> Corporate Events & Galas</li>
+                        <li><i class="fas fa-birthday-cake"></i> Private Parties & Celebrations</li>
+                        <li><i class="fas fa-music"></i> Concert Performances</li>
+                        <li><i class="fas fa-camera"></i> Recording Sessions</li>
+                    </ul>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>sarah.chen@email.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>+1 (555) 123-4567</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>New York, NY</span>
+                        </div>
                     </div>
                 </div>
-                <div class="performance-album" data-album="Dinner">
-                    <h3>Dinner</h3>
-                    <div class="fan-out">
-                        <video src="video dinner/dinner1.mp4"></video>
-                        <video src="video dinner/dinner2.mp4"></video>
-                        <video src="video dinner/dinner3.mp4"></video>
-                        <video src="video dinner/dinner4.MP4"></video>
-                        <video src="video dinner/dinner5.MP4"></video>
-                        <video src="video dinner/dinner6.MP4"></video>
-                        <video src="video dinner/dinner7.MP4"></video>
-                        <video src="video dinner/dinner8.MP4"></video>
-                        <video src="video dinner/dinner9.MP4"></video>
-                        <video src="video dinner/dinner10.MP4"></video>
-                        <video src="video dinner/dinner11.MP4"></video>
-                        <video src="video dinner/dinner12.mp4"></video>
-                    </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Event Type" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" placeholder="Event Date" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Tell us about your event..." rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary">Send Message</button>
+                    </form>
                 </div>
-                <div class="performance-album" data-album="Live">
-                    <h3>Live</h3>
-                    <div class="fan-out">
-                        <video src="video live/live1.mp4"></video>
-                        <video src="video live/live2.mp4"></video>
-                        <video src="video live/live3.mp4"></video>
-                        <video src="video live/live4.mp4"></video>
-                        <video src="video live/live5.mp4"></video>
-                        <video src="video live/live6.mp4"></video>
-                        <video src="video live/live7.mp4"></video>
-                        <video src="video live/live8.mp4"></video>
-                        <video src="video live/live9.mp4"></video>
-                        <video src="video live/live10.mp4"></video>
-                    </div>
-                </div>
-                <div class="performance-album" data-album="TV">
-                    <h3>TV</h3>
-                    <div class="fan-out">
-                        <video src="video tv/tv1.mp4"></video>
-                    </div>
-                </div>
-                <div class="performance-album" data-album="Radio">
-                    <h3>Radio</h3>
-                    <div class="fan-out">
-                        <video src="video radio/radio1.MOV"></video>
-                        <video src="video radio/radio2.mp4"></video>
-                        <video src="video radio/radio3.mp4"></video>
-                        <video src="video radio/IMG_0744.MOV"></video>
-                        <video src="video radio/IMG_0745.MOV"></video>
-                        <video src="video radio/IMG_0803.MOV"></video>
-                        <video src="video radio/IMG_0805.MOV"></video>
-                    </div>
-                </div>
-                <!-- Add more performance-album divs as needed -->
             </div>
         </div>
     </section>
 
-    <!-- Add this at the end of the body -->
-    <div id="performance-lightbox" class="lightbox">
-        <span class="close">&times;</span>
-        <div class="lightbox-content">
-            <h3 id="performance-lightbox-title"></h3>
-            <div class="lightbox-videos"></div>
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Sarah Chen</h3>
+                <p>Professional Violinist</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-spotify"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <p>&copy; 2024 Sarah Chen. All rights reserved.</p>
+            </div>
         </div>
-    </div>
-
-    <div id="fullscreen-video" class="fullscreen-video">
-        <span class="close-fullscreen">&times;</span>
-        <video controls id="fullscreen-video-player"></video>
-    </div>
+    </footer>
 
     <script>
-        const performanceAlbums = document.querySelectorAll('.performance-album');
-        const performanceLightbox = document.getElementById('performance-lightbox');
-        const performanceLightboxTitle = document.getElementById('performance-lightbox-title');
-        const lightboxVideos = document.querySelector('.lightbox-videos');
-        const closePerformanceLightbox = performanceLightbox.querySelector('.close');
-        const fullscreenVideo = document.getElementById('fullscreen-video');
-        const fullscreenVideoPlayer = document.getElementById('fullscreen-video-player');
-        const closeFullscreenVideo = fullscreenVideo.querySelector('.close-fullscreen');
-
-        performanceAlbums.forEach(album => {
-            album.addEventListener('click', () => {
-                const albumTitle = album.getAttribute('data-album');
-                const videos = album.querySelectorAll('video');
-                
-                performanceLightboxTitle.textContent = albumTitle;
-                lightboxVideos.innerHTML = '';
-                
-                videos.forEach(video => {
-                    const newVideo = document.createElement('video');
-                    newVideo.src = video.src;
-                    newVideo.addEventListener('click', () => {
-                        fullscreenVideoPlayer.src = video.src;
-                        fullscreenVideo.style.display = 'flex';
-                    });
-                    lightboxVideos.appendChild(newVideo);
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
                 });
-                
-                performanceLightbox.style.display = 'flex';
             });
         });
 
-        closePerformanceLightbox.addEventListener('click', () => {
-            performanceLightbox.style.display = 'none';
+        // Form submission
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Thank you for your message! Sarah will get back to you soon.');
         });
 
-        closeFullscreenVideo.addEventListener('click', () => {
-            fullscreenVideo.style.display = 'none';
-            fullscreenVideoPlayer.pause();
-        });
+        // Lightbox functionality
+        function openLightbox(src, alt) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            lightboxImg.src = src;
+            lightboxImg.alt = alt;
+            lightboxCaption.textContent = alt;
+            lightbox.style.display = 'flex';
+            
+            // Prevent body scroll when lightbox is open
+            document.body.style.overflow = 'hidden';
+        }
 
-        performanceLightbox.addEventListener('click', (e) => {
-            if (e.target === performanceLightbox) {
-                performanceLightbox.style.display = 'none';
+        function closeLightbox() {
+            const lightbox = document.getElementById('lightbox');
+            lightbox.style.display = 'none';
+            
+            // Restore body scroll
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close lightbox when clicking outside the image
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeLightbox();
             }
         });
 
-        fullscreenVideo.addEventListener('click', (e) => {
-            if (e.target === fullscreenVideo) {
-                fullscreenVideo.style.display = 'none';
-                fullscreenVideoPlayer.pause();
+        // Close lightbox with Escape key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeLightbox();
             }
         });
     </script>
-
-    <section class="package" id="package">
-        <div class="package-container">
-            <h2>Packages</h2>
-            <div class="package-images">
-                <div class="package-image">
-                    <img src="Package/1.jpeg" alt="Package 1">
-                </div>
-                <div class="package-image">
-                    <img src="Package/2.jpeg" alt="Package 2">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="reviews" id="reviews">
-        <div class="reviews-container">
-            <h2>Customer Reviews</h2>
-            <div class="review-slider-container">
-                <div class="review-slider">
-                    <div class="review">
-                        <div class="customer-info">
-                            <h3>John Doe</h3>
-                        </div>
-                        <p class="review-text">"Aiman's violin performance at our wedding was absolutely magical. Her talent and passion for music truly elevated our special day."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="customer-info">
-                            <h3>John Doe</h3>
-                        </div>
-                        <p class="review-text">"Aiman's violin performance at our wedding was absolutely magical. Her talent and passion for music truly elevated our special day."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="customer-info">
-                            <h3>Jane Smith</h3>
-                        </div>
-                        <p class="review-text">"We hired Aiman for our corporate event, and she exceeded all expectations. Her professionalism and musical prowess left our guests in awe."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star-half-alt"></i>
-                        </div>
-                    </div>
-                    <div class="review">
-                        <div class="customer-info">
-                            <h3>Mike Johnson</h3>
-                        </div>
-                        <p class="review-text">"Aiman's performance at our daughter's birthday party was the highlight of the event. Her ability to engage with the audience is truly remarkable."</p>
-                        <div class="rating">
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                            <i class="fas fa-star"></i>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('.review-slider');
-    const prevButton = document.querySelector('.prev-review');
-    const nextButton = document.querySelector('.next-review');
-    const reviews = document.querySelectorAll('.review');
-    const reviewWidth = reviews[0].offsetWidth + parseInt(window.getComputedStyle(reviews[0]).marginRight);
-
-    prevButton.addEventListener('click', () => {
-        slider.scrollBy({
-            left: -reviewWidth,
-            behavior: 'smooth'
-        });
-    });
-
-    nextButton.addEventListener('click', () => {
-        slider.scrollBy({
-            left: reviewWidth,
-            behavior: 'smooth'
-        });
-    });
-
-    // Hide arrows if at the beginning or end
-    slider.addEventListener('scroll', () => {
-        const scrollPosition = slider.scrollLeft;
-        const maxScroll = slider.scrollWidth - slider.clientWidth;
-
-        prevButton.style.display = scrollPosition > 0 ? 'block' : 'none';
-        nextButton.style.display = scrollPosition < maxScroll ? 'block' : 'none';
-    });
-
-    // Initial check to hide left arrow if at the start
-    prevButton.style.display = 'none';
-});
-    </script>
-
 </body>
 </html>
